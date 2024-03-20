@@ -44,3 +44,11 @@ print(q11) # rourkela
 a1 = info.get('language')
 print(a1)
 
+print(len(info)) # 4
+
+print("lastName" in info) # True
+
+print(info) # {'firstName': 'sonal', 'lastName': 'khante', 'city': 'rourkela', 'language': 'hindi'}
+
+del info
+print(info) # NameError: name 'info' is not defined
