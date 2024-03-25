@@ -102,3 +102,86 @@ PersonD.changeCountry("Hindustan")
 print(Per1.country) # India
 print(Per2.country) # Hindustan
 print(Per3.country) # Hindustan
+
+print("========================================")
+# script22.py
+
+# class instance methodof
+
+class Person:
+    
+    #constructor
+    def __init__(self,fn,ln): # fn and ln are parameters
+        # instance varaibles
+        self.firstName = fn # self.firstname is property
+        self.lastName = ln
+
+    # instance method
+    def displayName(self):
+        print(self.firstName + " "+self.lastName)
+
+    # lastName Update
+    def updateName(self, ln):
+        self.lastName = ln
+
+sonal = Person("sonal","khante")
+print(sonal.firstName) #sonal =====> property call
+print(sonal.lastName) #khante
+sonal.displayName() # sonal Khante =====> method call
+sonal.updateName("chetan")
+#class instance, class method
+
+print('=========================================')
+
+# Program 2
+
+class Home:
+    country = "India"
+    #constructor
+    def __init__(self, fn, ln):
+        self.firstName = fn
+        self.lastName = ln
+    # instance method
+    def updateName(self, ln, fn):
+        self.firstName = fn
+        self.lastName = ln
+    # class method
+    @classmethod
+    def updateCountry(cls, cnty):
+        cls.country = cnty
+h = Home("sonal", "khante")
+print(h.firstName) # sonal
+print(h.lastName) # khante
+print(h.country) # India
+h.country = "Bharat"
+h1 = Home("chetan", "khante")
+print(h1.country) # India
+h1.updateCountry("Hindustan")
+print(h.country) # Bharat 
+print(h1.country) # Hindustan
+
+# static method
+# count number of objects
+
+# Program 3
+
+class Fruit:
+    count = 0
+    Fru = "Orange"
+    def __init__(self,ff,sf):
+        self.firstfru = ff
+        self.secfru = sf
+        Fruit.count = Fruit.count + 1
+    def displayFru(self):
+        print(self.firstfru + " ," + self.secfru)
+    @classmethod
+    def updateFruit(cls,frt):
+        cls.Fru = frt
+    @staticmethod
+    def countObj():
+        return Fruit.count
+    
+fru1 = Fruit("banana","mango")
+fru2 = Fruit("cherry","pineapple")
+a = Fruit.countObj()
+print(a) # 2
