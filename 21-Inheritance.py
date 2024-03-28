@@ -219,8 +219,36 @@ s7.displayDaughter() # Indratyani Lambat
 s8.displayMother() # Lalita Lambat
 s8.displaySon() # Ketan Lambat
 
-
+print("============================================")
 
 # multiple inheritance
 
+#   mother father
+#      |    |
+#       son
 
+# single class is inherited from many class
+
+class Mother:
+    def __init__(self,mn, ln):
+        print("Mother Constructor Called....")
+        self.motherName = mn
+        self.lastName = ln
+    def displayMName(self):
+        print(self.motherName + " " + self.lastName)
+class Father:
+    def __init__(self, fn, ln):
+        print("Father constructor called....")
+        self.fatherName = fn
+        self.lastName = ln
+    def displayFName(self):
+        print(self.fatherName + " " + self.lastName)
+
+class Son(Mother,Father):
+    def __init__(self, mn, ln, sn):
+        super().__init__(mn, ln)
+        self.sname = sn
+    def displaySName(self):
+        print(self.sname + " " + self.lastName)
+
+s9 = Son("Lalita", "Lambat", "Ketan") # Mother Constructor Called..
