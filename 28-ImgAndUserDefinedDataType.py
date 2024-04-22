@@ -70,3 +70,23 @@ f.close()
 # Enter lastName : Lambat
 # Enter Email : ketanlambat@gmail.com
 # Enter age : 23
+
+
+# the pickle module is used for serializing and deserializing Python objects into a byte stream. 
+# Serialization is the process of converting a Python object into a byte stream, which can then be stored in a file or transmitted over a network. 
+# Deserialization is the process of converting the byte stream back into a Python object.
+
+
+# pickle.dump(object, file) is used to serialize a Python object object and save it to a file file. 
+# Serialization with pickle.dump(): You can use the pickle.dump() function to serialize a Python object and write it to a file. This function takes two arguments: the Python object you want to serialize and a file object opened in binary write mode ('wb').
+# This allows you to store complex Python data structures like dictionaries, lists, or even custom objects to a file.
+
+# pickle.load(file) is used to deserialize data from a file file back into a Python object. 
+# This is the reverse process of pickle.dump().
+# Deserialization with pickle.load(): You can use the pickle.load() function to deserialize a byte stream from a file and reconstruct the original Python object. This function takes a file object opened in binary read mode ('rb') as its argument.
+# It reads the serialized data from the file and reconstructs the original Python object.
+
+# Together, these two methods provide a convenient way to save and load Python objects, preserving their structure and state.
+# They are often used for data persistence, inter-process communication, or transferring Python objects between different Python programs.
+# However, it's important to note that pickle is specific to Python and may not be compatible with other programming languages.
+# Also, caution should be exercised when unpickling data from untrusted sources to avoid security risks.
