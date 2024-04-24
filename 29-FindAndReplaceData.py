@@ -97,7 +97,7 @@
 #                                     Useful when you need to both read and modify the contents of a binary file.
 
 import os
-gap = 20
+gap = 20 # always use reclen instead of gap .....reclen means record length
 size1 = os.path.getsize('cities1.bin')
 totalRecods1 = int(size1/gap)
 
