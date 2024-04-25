@@ -1,6 +1,7 @@
 # # 12th April 2024
 
-# # script26.py ===> File Handling
+# # script26.py
+# ############################## File Handling ###########################################
 
 # Program 1 ====> Write a code to read a jpg file and write to make it duplicate
 
